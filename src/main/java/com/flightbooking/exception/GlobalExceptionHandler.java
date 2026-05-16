@@ -1,6 +1,6 @@
 package com.flightbooking.exception;
 
-import com.flightbooking.dto.Dtos.ErrorResponse;
+import com.flightbooking.dto.ErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;

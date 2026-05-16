@@ -1,6 +1,5 @@
 package com.flightbooking.repository;
 
-import com.flightbooking.model.Booking;
 import com.flightbooking.model.Flight;
 import org.springframework.stereotype.Repository;
 

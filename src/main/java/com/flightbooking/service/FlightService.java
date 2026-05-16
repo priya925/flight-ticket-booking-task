@@ -1,6 +1,7 @@
 package com.flightbooking.service;
 
-import com.flightbooking.dto.Dtos.*;
+import com.flightbooking.dto.CreateFlightRequest;
+import com.flightbooking.dto.FlightResponse;
 import com.flightbooking.exception.FlightAlreadyExistsException;
 import com.flightbooking.exception.FlightNotFoundException;
 import com.flightbooking.model.Flight;

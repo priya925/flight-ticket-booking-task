@@ -1,7 +1,10 @@
 package com.flightbooking;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.flightbooking.dto.Dtos.*;
+import com.flightbooking.dto.BookingResponse;
+import com.flightbooking.dto.CreateBookingRequest;
+import com.flightbooking.dto.CreateFlightRequest;
+import com.flightbooking.dto.PassengerRequest;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -17,7 +20,8 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
 @AutoConfigureMockMvc

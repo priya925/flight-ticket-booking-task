@@ -1,6 +1,8 @@
 package com.flightbooking.service;
 
-import com.flightbooking.dto.Dtos.*;
+import com.flightbooking.dto.BookingResponse;
+import com.flightbooking.dto.CreateBookingRequest;
+import com.flightbooking.dto.PassengerResponse;
 import com.flightbooking.exception.BookingNotFoundException;
 import com.flightbooking.exception.NoAvailableSeatsException;
 import com.flightbooking.model.Booking;
@@ -8,6 +10,7 @@ import com.flightbooking.model.BookingStatus;
 import com.flightbooking.model.Flight;
 import com.flightbooking.model.Passenger;
 import com.flightbooking.repository.InMemoryBookingRepository;
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -26,7 +29,7 @@ public class BookingService {
         this.flightService = flightService;
     }
 
-    public BookingResponse createBooking(CreateBookingRequest request) {
+    public BookingResponse createBooking(@Valid CreateBookingRequest request) {
         Flight flight = flightService.findOrThrow(request.flightNumber());
 
         int seatCount = request.passengers().size();
