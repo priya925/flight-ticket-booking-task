@@ -1,4 +1,4 @@
-# Flight Ticket Booking API
+# Flight Ticket Booking Task
 
 A REST API for flight ticket booking built with Spring Boot and Java.
 
@@ -21,8 +21,8 @@ A REST API for flight ticket booking built with Spring Boot and Java.
 ### Steps
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/flight-booking-api.git
-cd flight-booking-api
+git clone https://github.com/YOUR_USERNAME/flight-ticket-booking-task.git
+cd flight-ticket-booking-task
 ./gradlew bootRun
 ```
 
@@ -31,6 +31,12 @@ Or build a fat jar and run it:
 ```bash
 ./gradlew clean build
 java -jar build/libs/flight-booking-api-0.0.1-SNAPSHOT.jar
+```
+
+Or run the project in intellij
+```Intellij
+Load the gradle project in intellij. Build it and then open FlightBookingApplication.java file
+And run this java file and the server will start at port 8080.
 ```
 
 The API will be available at `http://localhost:8080`.
@@ -216,3 +222,4 @@ Short 8-character uppercase alphanumeric reference generated from a UUID substri
 8. **Price and fare class** — real bookings need fare tiers (economy/business) and pricing
 9. **Booking reference collision handling** — extremely unlikely but not handled; a retry loop or UUID-based reference would fix this
 10. **Integration test isolation** — tests currently share application context; each test class should reset state via `@BeforeEach`
+11. **Unit test coverage** — Have to add unit test cases 
